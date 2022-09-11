@@ -43,7 +43,7 @@ function Login() {
                                 </a>
                                 <a href="#" className="social-icon">
                                 <i className="Bs Google"></i>
-                                <BsGoogle/>
+                                <BsGoogle size={25}/>
                                 
                                 </a>
                             </div>
