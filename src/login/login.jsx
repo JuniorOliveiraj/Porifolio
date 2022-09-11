@@ -1,5 +1,5 @@
 import './styleLogin.css'
-import { BsGoogle, BsGithub,BsTwitter } from 'react-icons/bs';
+import { BsGoogle, BsGithub, BsTwitter } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
 import { useState } from 'react'
 
@@ -37,17 +37,17 @@ function Login() {
                             <p className="social-text">Ou Inscreva-se nas plataformas sociais</p>
                             <div className="social-media">
                                 <a href="#" className="social-icon">
-                                    <BsTwitter size={25}/>
+                                    <BsTwitter size={25} />
                                 </a>
                                 <a href="#" className="social-icon">
-                                <BsGithub size={25}/>
+                                    <BsGithub size={25} />
                                 </a>
                                 <a href="#" className="social-icon">
-                                <FaFacebookF size={25}/>
+                                    <BsGoogle size={25} />
                                 </a>
                                 <a href="#" className="social-icon">
-                                 <FaFacebookF size={25}/>
-                                
+                                    <FaFacebookF size={25} />
+
                                 </a>
                             </div>
                         </form>
@@ -69,16 +69,16 @@ function Login() {
                             <p className="social-text">Ou Inscreva-se nas plataformas sociais</p>
                             <div className="social-media">
                                 <a href="#" className="social-icon">
-                                <BsTwitter size={25}/>
+                                    <BsTwitter size={25} />
                                 </a>
                                 <a href="#" className="social-icon">
-                                <BsGithub size={25}/>
+                                    <BsGithub size={25} />
                                 </a>
                                 <a href="#" className="social-icon">
-                                <BsGoogle size={25}/>
+                                    <BsGoogle size={25} />
                                 </a>
                                 <a href="#" className="social-icon">
-                                <FaFacebookF size={25}/>
+                                    <FaFacebookF size={25} />
                                 </a>
                             </div>
                         </form>
