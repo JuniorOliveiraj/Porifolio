@@ -1,4 +1,5 @@
 import './styleLogin.css'
+import { BsGoogle } from 'react-icons/bs';
 import { useState } from 'react'
 
 
@@ -41,7 +42,8 @@ function Login() {
                                 <a href="#" className="social-icon">
                                 </a>
                                 <a href="#" className="social-icon">
-                                <i className="FaFacebookF"></i>
+                                <i className="Bs Google"></i>
+                                <BsGoogle/>
                                 
                                 </a>
                             </div>
