@@ -2,13 +2,14 @@
 import {app} from '../firebase'
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
+import {FaUserCircle} from 'react-icons/fa';
 function ListItensMenu (){
     return(
         <div className="nav">
         <div className ="nav__content">
             <ul className="nav__list">
                
-                {/* <li className="nav__list-item "><Link to="Login"> <iconeMenu><FaUserCircle size={42}/></iconeMenu> </Link>   </li> */}
+               <li className="nav__list-item "><Link to="Login"> <iconeMenu><FaUserCircle size={42}/></iconeMenu> </Link>   </li> 
                 <li className="nav__list-item active-nav"><a href="#" className="hover-target">home</a></li>
                 <li className="nav__list-item"><a  className="hover-target">studio </a></li>
                 <li className="nav__list-item"><a href="#" className="hover-target">news</a></li>
