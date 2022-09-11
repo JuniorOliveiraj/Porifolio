@@ -2,7 +2,7 @@ import './styleLogin.css'
 import { BsGoogle, BsGithub, BsTwitter } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
 import { useState } from 'react'
-
+import { Routes, Route, Link } from "react-router-dom";
 
 function Login() {
 
@@ -34,6 +34,7 @@ function Login() {
                                 <i className="fas fa-lock"></i>
                                 <input type="password" placeholder="Password" />
                             </div>
+                             <Link to="/" ><input type="submit" className="btn" value="Login" /></Link>
                             <p className="social-text">Ou Inscreva-se nas plataformas sociais</p>
                             <div className="social-media">
                                 <a href="#" className="social-icon">
