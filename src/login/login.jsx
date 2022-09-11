@@ -41,6 +41,8 @@ function Login() {
                                 <a href="#" className="social-icon">
                                 </a>
                                 <a href="#" className="social-icon">
+                                <i className="FaFacebookF"></i>
+                                
                                 </a>
                             </div>
                         </form>
