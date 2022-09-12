@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
 import { BsGoogle, BsGithub, BsTwitter } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
-import { Link } from "react-router-dom";
+import {useContext} from 'react';
+import { authGoogleContex } from "../contexts/authGoogle";
 function FormLogin() {
+    const {singInGoogle} = useContext(authGoogleContex); 
     return (
         <>
             <form action="#" className="sign-in-form">
@@ -17,19 +20,10 @@ function FormLogin() {
                 <Link to="/" ><input type="submit" className="btn" value="Login" /></Link>
                 <p className="social-text">Ou Inscreva-se nas plataformas sociais</p>
                 <div className="social-media">
-                    <a href="#" className="social-icon">
-                        <BsTwitter size={25} />
-                    </a>
-                    <a href="#" className="social-icon">
-                        <BsGithub size={25} />
-                    </a>
-                    <a href="#" className="social-icon">
-                        <BsGoogle size={25} />
-                    </a>
-                    <a href="#" className="social-icon">
-                        <FaFacebookF size={25} />
-
-                    </a>
+                    <button className='social-icon'><BsTwitter size={25} /></button>
+                    <button className='social-icon'><BsGithub size={25} /></button>
+                    <button className='social-icon'> <BsGoogle size={25} onClick={ () => authGoogleContex()} /></button>
+                    <button className='social-icon'><FaFacebookF  size={25} /></button>
                 </div>
             </form>
         </>
