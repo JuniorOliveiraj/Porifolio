@@ -13,12 +13,13 @@ import 'firebase/firestore';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey:REACT_APP_FIREBASE_APIKEY,
-  authDomain:REACT_APP_FIREBASE_AUTHDOMAIN,
-  projectId:REACT_APP_FIREBASE_PROJECTID,
-  storageBucket:REACT_APP_FIREBASE_STORAGEBUCKET,
-  messagingSenderId:REACT_APP_FIREBASE_MESSEAGINDERID,
-  appId:REACT_APP_FIREBASE_APPID,
+  apiKey: "AIzaSyCJsUPR5HZqJK-PqlGtSQZ0cxgh5NHmml4",
+  authDomain: "portifolio-e4589.firebaseapp.com",
+  projectId: "portifolio-e4589",
+  storageBucket: "portifolio-e4589.appspot.com",
+  messagingSenderId: "1093227670293",
+  appId: "1:1093227670293:web:8451ab3caad61c521b571c",
+  measurementId: "G-B3T9VXB1LS"
 
 };
 
