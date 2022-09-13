@@ -31,15 +31,6 @@ export const AuthGoogle = ( {children} ) =>{
                 const errorMessage = error.message;
                 const email = error.customData.email;
                 const credential = GoogleAuthProvider.credentialFromError(error);
-                if(errorCode){
-                    alert(errorCode)
-                }if (errorMessage){
-                      alert(errorCode)
-                }if(email){
-                    alert(email)
-                }if(credential){
-                     alert(credential)
-                }
             });
     };
 
