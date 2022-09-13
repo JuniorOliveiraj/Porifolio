@@ -25,7 +25,7 @@ function FormLogin() {
                 <div className="social-media">
                     <button className='social-icon'><BsTwitter size={25} /></button>
                     <button className='social-icon'><BsGithub size={25} /></button>
-                    <button className='social-icon'> <BsGoogle size={25} onClick={ () => singInGoogle()} /></button>
+                    <button className='social-icon' onClick={ () => singInGoogle()} > <BsGoogle size={25}  /></button>
                     <button className='social-icon'><FaFacebookF  size={25} /></button>
                 </div>
             </form>

@@ -4,10 +4,13 @@ import { useState, useEffect } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../firebase'
 import {AuthGoogle} from '../contexts/authGoogle'
-
+import { authGoogleContex } from "../contexts/authGoogle";
+import {singInGoogle} from '../contexts/authGoogle'
+import {useContext} from 'react';
 function FormRegister() {
     const [registerEmail, setRegisterEmail] = useState("");
     const [registerPassword, setRegisterPassword] = useState("");
+    const {signed,singInGoogle} = useContext(authGoogleContex); 
     const register = async () => {
         try {
             const user = await createUserWithEmailAndPassword(
@@ -54,7 +57,7 @@ function FormRegister() {
                 <div className="social-media">
                     <button className='social-icon'><BsTwitter size={25} /></button>
                     <button className='social-icon'><BsGithub size={25} /></button>
-                    <button className='social-icon'> <BsGoogle size={25}  /></button>
+                    <button className='social-icon' onClick={ () => singInGoogle()} > <BsGoogle size={25}  /></button>
                     <button className='social-icon'><FaFacebookF  size={25} /></button>
                   
                 </div>
