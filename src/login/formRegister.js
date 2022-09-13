@@ -15,7 +15,7 @@ function FormRegister() {
                 registerEmail,
                 registerPassword
             )
-            console.log(user)
+          
         } catch (error) {
             console.log(error.message)
         }

@@ -6,7 +6,7 @@ import { authGoogleContex } from "../contexts/authGoogle";
 import {singInGoogle} from '../contexts/authGoogle'
 function FormLogin() {
     const {signed,singInGoogle} = useContext(authGoogleContex); 
-    console.log(signed, 'login',authGoogleContex)
+   
     
     return (
         <>
