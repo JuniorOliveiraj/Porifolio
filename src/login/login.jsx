@@ -15,6 +15,7 @@ function Login() {
             setModel(!active)
         }
         const {singInGoogle,signed} = useContext(authGoogleContex); 
+      
    
         if(!signed){
             

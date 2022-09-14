@@ -1,35 +1,20 @@
+import { Link } from "react-router-dom";
 import { BsGoogle, BsGithub, BsTwitter } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
-import { useState, useEffect } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../firebase'
-import {AuthGoogle} from '../contexts/authGoogle'
+import {useContext} from 'react';
 import { authGoogleContex } from "../contexts/authGoogle";
 import {singInGoogle} from '../contexts/authGoogle'
-import {useContext} from 'react';
+import { useState, useEffect,createContext } from 'react';
 function FormRegister() {
-    const [registerEmail, setRegisterEmail] = useState("");
-    const [registerPassword, setRegisterPassword] = useState("");
-    const {signed,singInGoogle} = useContext(authGoogleContex); 
-    const register = async () => {
-        try {
-            const user = await createUserWithEmailAndPassword(
-                auth,
-                registerEmail,
-                registerPassword
-            )
-          
-        } catch (error) {
-            console.log(error.message)
-        }
+const [registerEmail, setRegisterEmail] = useState("");
+const [registerPassword, setRegisterPassword] = useState("");
 
-    }
+    const {register} = useContext(authGoogleContex); 
+   async function registerSenha(){
+        await register(registerEmail, registerPassword);
 
-
-
-
-  
-
+    
+   }
     return (
         <>
             <form action="#" className="sign-up-form">
@@ -52,14 +37,14 @@ function FormRegister() {
 
                     }} />
                 </div>
-                <input type="submit" className="btn" value="Sign up" onClick={register} />
-                <p className="social-text">Ou Inscreva-se nas plataformas sociais</p>
+                <input type="submit" className="btn" value="Sign up" onClick={registerSenha} />
+                <p className="social-text">Ou Inscreva-se nas plataformas sociais </p>
                 <div className="social-media">
                     <button className='social-icon'><BsTwitter size={25} /></button>
                     <button className='social-icon'><BsGithub size={25} /></button>
-                    <button className='social-icon' onClick={ () => singInGoogle()} > <BsGoogle size={25}  /></button>
-                    <button className='social-icon'><FaFacebookF  size={25} /></button>
-                  
+                    <button className='social-icon'> <BsGoogle size={25} /></button>
+                    <button className='social-icon'><FaFacebookF size={25} /></button>
+
                 </div>
             </form>
 

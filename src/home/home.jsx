@@ -2,17 +2,18 @@ import "../App.css";
 import '../css/styleMenu.css'
 import videoBg from '../assets/ElementsBackground.mp4'
 import UploaldImgStore from "../UploaldImgStore";
-
 import Tubar from "../menu-home/Tubar";
 import ListItensMenu from "../menu-home/ListItensMenu";
 import { ContainerHomeCenter, ContainerHomeBluerSombra } from "../containr/container1";
-
+import React, { useContext } from 'react'
+import { Navigate, Outlet } from 'react-router-dom';
+import { authGoogleContex } from "../contexts/authGoogle";
 
 
 
 
 function Home() {
-  
+
 
 
 
