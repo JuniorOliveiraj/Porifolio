@@ -21,13 +21,7 @@ const firebaseConfig = {
   messagingSenderId: "1093227670293",
   appId: "1:1093227670293:web:8451ab3caad61c521b571c",
   measurementId: "G-B3T9VXB1LS
-  {/*  apiKey:process.env.FIREBASE_APIKEY,
-  authDomain:process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
-  projectId:process.env.REACT_APP_FIREBASE_PROJECTID,
-  storageBucket:process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
-  messagingSenderId:process.env.REACT_APP_FIREBASE_MESSEAGINDERID,
-  appId:process.env.REACT_APP_FIREBASE_APPID,
-  measurementId:process.env.REACT_APP_FIREBASE_MEASUREMENTID*/}
+
 
 
 };
