@@ -19,7 +19,7 @@ function FormLogin() {
     return (
         <>
             <form action="#" className="sign-in-form">
-                <h2 className="title">Entrar</h2>
+                <h2 className="title">Entrar.</h2>
                 <div className="input-field">
                     <i className="fas fa-user"></i>
                     <input type="email" placeholder="Email" onChange={(event) => {
