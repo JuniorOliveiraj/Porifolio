@@ -1,7 +1,7 @@
 import { useState, useEffect, createContext } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword,onAuthStateChanged } from "firebase/auth";
 
 export const authGoogleContex = createContext({});
 export const provider = new GoogleAuthProvider();
@@ -13,6 +13,9 @@ export const AuthGoogle = ({ children }) => {
         const loadStoreAuth = () => {
             const sessionToken = sessionStorage.getItem("@AuthFirebase: token");
             const sessionUser = sessionStorage.getItem("@AuthFirebase: user");
+
+            
+
             if (sessionToken && sessionUser) {
                 setUser(sessionUser);
             }
