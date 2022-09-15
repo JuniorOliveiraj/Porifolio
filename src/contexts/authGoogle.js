@@ -1,6 +1,5 @@
 import { useState, useEffect, createContext } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../firebase'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
@@ -8,16 +7,18 @@ export const authGoogleContex = createContext({});
 export const provider = new GoogleAuthProvider();
 export const AuthGoogle = ({ children }) => {
     const [user, setUser] = useState(null)
+    const [teste, settest] = useState(null)
+
     useEffect(() => {
         const loadStoreAuth = () => {
             const sessionToken = sessionStorage.getItem("@AuthFirebase: token");
             const sessionUser = sessionStorage.getItem("@AuthFirebase: user");
-            if (sessionToken || sessionUser) {
+            if (sessionToken && sessionUser) {
                 setUser(sessionUser);
             }
         }; loadStoreAuth();
     }, [])
-    const singInGoogle = () => {
+    const singInGoogle = async () => {
 
         signInWithPopup(auth, provider)
             .then((result) => {
@@ -39,38 +40,31 @@ export const AuthGoogle = ({ children }) => {
 
     /*  ********************************************************************************************
     ****************************** senha *********************************************************** */
-    const register = (registerEmail, registerPassword) => {
-        createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
-            .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
-                // ...
+
+    const register = async (registerEmail, registerPassword) => {
+        try {
+        const user = await createUserWithEmailAndPassword(auth,registerEmail,registerPassword)
                 setUser(user)
+                sessionStorage.setItem("@AuthFirebase: user", JSON.stringify(user))
+               
+                console.log(settest)
                 console.log(user)
-                sessionStorage.setItem("@AuthFirebase: user", JSON.stringify(user));
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-
-                // ..
-                if (error == 'FirebaseError: Firebase: Password should be at least 6 characters (auth/weak-password).') {
-                    alert("senha deve ter mais de 6 digitos ")
-                } if (error == "FirebaseError: Firebase: Error (auth/invalid-email).") {
-                    alert("email invalido")
-                } else {
-                    alert(error)
-                    console.log(error)
-
-                }
+          
+        } catch (error) {
+            console.log(error.message)
+            alert(error)
+        }
+        console.log(user)
 
 
-            });
-
-    }
 
 
-    const LoginSenha = (loginEmail, loginPassword) => {
+}
+   
+    const auth = getAuth();
+    
+
+    const LoginSenha  = async (loginEmail, loginPassword) => {
         signInWithEmailAndPassword(auth, loginEmail, loginPassword)
             .then((userCredential) => {
                 // Signed in
