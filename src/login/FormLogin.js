@@ -5,17 +5,19 @@ import {useContext ,useState} from 'react';
 import { authGoogleContex } from "../contexts/authGoogle";
 import {singInGoogle} from '../contexts/authGoogle'
 function FormLogin() {
-    const {signed,singInGoogle,LoginSenha } = useContext(authGoogleContex); 
+    const {signed,logout,login,user,LoginSenha } = useContext(authGoogleContex); 
     async function LoginGoogle(){
-    await singInGoogle();
+        await login();
    }
 
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
     async function LoginSenhaButton(){
-         await LoginSenha(loginEmail,loginPassword);
+         await LoginSenha(loginEmail, loginPassword)
     }
-
+    async function sair(){
+        await logout()
+    }
     return (
         <>
             <form action="#" className="sign-in-form">
@@ -36,11 +38,12 @@ function FormLogin() {
                 </div>
                 <input type="submit" className="btn" value="Login" onClick={LoginSenhaButton} />
                 <p className="social-text">Ou Inscreva-se nas plataformas sociais</p>
+                {user?.email}
                 <div className="social-media">
                     <button className='social-icon'><BsTwitter size={25} /></button>
                     <button className='social-icon'><BsGithub size={25} /></button>
                     <button className='social-icon' onClick={ () => LoginGoogle()} > <BsGoogle size={25}  /></button>
-                    <button className='social-icon'><FaFacebookF  size={25} /></button>
+                    <button className='social-icon' onClick={ () => sair()}  ><FaFacebookF  size={25} /></button>
                 </div>
             </form>
         </>

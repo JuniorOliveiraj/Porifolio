@@ -28,7 +28,7 @@ const Carousel = ({activeIndex, setActiveIndex, children}) => {
   const [carouselTranslate, setCarouselTranslate] = useState(null);
   
   useEffect(() => {
-    console.log(activeIndex)
+    //console.log(activeIndex)
     const initialTranslateVal = carouselRef.current.offsetWidth / 4;
     const diffAmount = initialTranslateVal * 2;
     const translate = activeIndex === 0 ? initialTranslateVal : initialTranslateVal - (activeIndex * diffAmount)

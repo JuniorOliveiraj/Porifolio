@@ -10,7 +10,7 @@ export default function AppRouters () {
         <Routes>
           <Route path='/'  element={<Login/>} />
           <Route path='/home'  element={<PrivateRouters/>}> 
-            <Route path='/home'  element={<Home/>}/>
+            <Route path='/home'  href='/home' element={<Home/>}/>
           </Route>
           <Route path='*' element={<NotFalPage/>} />
         </Routes>

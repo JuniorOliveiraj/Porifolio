@@ -1,12 +1,11 @@
 import './styleLogin.css'
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { Navigate } from 'react-router-dom';
 import FormLogin from './FormLogin';
 import FormRegister from './formRegister';
-import { useState } from 'react';
-import {useContext} from 'react';
+import {useContext ,useState} from 'react';
 import { authGoogleContex } from "../contexts/authGoogle";
 function Login() {
-       
+    const {signed,logout,login,user,LoginSenha,log } = useContext(authGoogleContex); 
         const [active, setModel] = useState(false)
         const toggleModel = () => {
             setModel(!active)
@@ -14,12 +13,13 @@ function Login() {
         const toggleModel2 = () => {
             setModel(!active)
         }
-        const {singInGoogle,signed} = useContext(authGoogleContex); 
-      
-   
-        if(!signed){
-            
+
         
+    
+            
+        if(signed !== null && log !==null ){
+           return <Navigate to="/home"/>
+        }else{
         return (
             <section  >
 
@@ -56,9 +56,8 @@ function Login() {
                     </div>
                 </div>
             </section>
-        )
-    }else{
-       return <Navigate to='/home' />
-    }
+        )}
+
+ 
 }
 export default Login

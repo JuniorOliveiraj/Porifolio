@@ -5,18 +5,15 @@ import UploaldImgStore from "../UploaldImgStore";
 import Tubar from "../menu-home/Tubar";
 import ListItensMenu from "../menu-home/ListItensMenu";
 import { ContainerHomeCenter, ContainerHomeBluerSombra } from "../containr/container1";
-import React, { useContext } from 'react'
+
 import { Navigate, Outlet } from 'react-router-dom';
 import { authGoogleContex } from "../contexts/authGoogle";
-
+import {useContext ,useState} from 'react';
 
 
 
 function Home() {
-
-
-
-
+  const {signed,logout,login,user } = useContext(authGoogleContex); 
   return (
     <div className="App">
       <Tubar />
@@ -25,10 +22,9 @@ function Home() {
         <ContainerHomeBluerSombra></ContainerHomeBluerSombra>
         <video className='videoBg' src={videoBg} autoPlay loop muted />
         <div className='containerText-videobg'> <h1>Developer <br /><span>Junior</span></h1></div>
-        
       </ContainerHomeCenter>
       <UploaldImgStore/> 
-
+    
     </div>
   );
 }

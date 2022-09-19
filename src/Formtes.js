@@ -27,7 +27,6 @@ function Formtes({}) {
         registerEmail,
         registerPassword
       );
-      console.log(user);
     } catch (error) {
       console.log(error.message);
     }
@@ -40,7 +39,6 @@ function Formtes({}) {
         loginEmail,
         loginPassword
       );
-      console.log(user);
     } catch (error) {
       console.log(error.message);
     }

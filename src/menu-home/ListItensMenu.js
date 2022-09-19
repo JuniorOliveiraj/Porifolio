@@ -3,17 +3,23 @@ import {app} from '../firebase'
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import {FaUserCircle} from 'react-icons/fa';
+import {useContext ,useState} from 'react';
+import { authGoogleContex } from "../contexts/authGoogle";
 function ListItensMenu (){
+    const {signed,logout,login,user,LoginSenha } = useContext(authGoogleContex); 
+    async function sair(){
+        await logout()
+    }
     return(
         <div className="nav">
         <div className ="nav__content">
             <ul className="nav__list">
                
-               <li className="nav__list-item "><Link to="Login"> <FaUserCircle size={42}/> </Link>   </li> 
-                <li className="nav__list-item active-nav"><a href="#" className="hover-target">home</a></li>
-                <li className="nav__list-item"><a  className="hover-target">studio </a></li>
-                <li className="nav__list-item"><a href="#" className="hover-target">news</a></li>
-                <li className="nav__list-item"><a href="#" className="hover-target">contact</a></li>
+               <li className="nav__list-item "><span className='hover-target'onClick={()=>sair()} > <div>{user?.email} </div><FaUserCircle size={42}/></span> </li> 
+                <li className="nav__list-item active-nav"><span className='hover-target'>home </span></li>
+                <li className="nav__list-item"><span className='hover-target'>studio </span> </li>
+                <li className="nav__list-item"><span className='hover-target'>news </span></li>
+                <li className="nav__list-item"><span className='hover-target'>contact </span></li>
                {/* <li className="nav__list-item"><a className="hover-target"  onClick={()=> app.auth().signOut()}> sair</a></li>*/}
             </ul>
         </div>
