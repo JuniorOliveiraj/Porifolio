@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"); 
 :root{
-  --background1: #1f2029 ;
+  --background1: rgb(9, 9, 10) ;
   --backgroundCirculo: #7928CA ;
   --backgroundCirculo22:#FF0080;
 }
