@@ -24,7 +24,7 @@ function Home() {
         <div className='containerText-videobg'> <h1>Developer <br /><span>Junior</span></h1></div>
       </ContainerHomeCenter>
       <UploaldImgStore/> 
-    
+      {user?.email}
     </div>
   );
 }
