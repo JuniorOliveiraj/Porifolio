@@ -1,6 +1,7 @@
 
 import {app} from '../firebase'
 import { Link } from "react-router-dom";
+import photoPeril from '../assets/perfil.png'
 import styled from 'styled-components';
 import {FaUserCircle} from 'react-icons/fa';
 import {useContext ,useState} from 'react';
@@ -10,12 +11,14 @@ function ListItensMenu (){
     async function sair(){
         await logout()
     }
+
+   console.log(user)
+   
     return(
         <div className="nav">
         <div className ="nav__content">
             <ul className="nav__list">
-               
-               <li className="nav__list-item "><span className='hover-target'onClick={()=>sair()} > <div>{user?.email} </div><FaUserCircle size={42}/></span> </li> 
+                <li className="nav__list-item"><span className='hover-target'><span className='hover-target'onClick={()=>sair()} ><FaUserCircle size={42}/> </span> </span></li>
                 <li className="nav__list-item active-nav"><span className='hover-target'>home </span></li>
                 <li className="nav__list-item"><span className='hover-target'>studio </span> </li>
                 <li className="nav__list-item"><span className='hover-target'>news </span></li>

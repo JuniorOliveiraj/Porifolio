@@ -62,8 +62,8 @@ export const AuthGoogle = ({ children }) => {
 
 
 
-const register  = async (registerEmail, registerPassword) => {
-  signInWithEmailAndPassword(auth, registerEmail, registerPassword)
+const register  = async (registerEmail, registerPassword,nameRegister) => {
+    createUserWithEmailAndPassword(auth, registerEmail, registerPassword,nameRegister)
       .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
