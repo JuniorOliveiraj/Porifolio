@@ -4,8 +4,9 @@ import FormLogin from './FormLogin';
 import FormRegister from './formRegister';
 import {useContext ,useState} from 'react';
 import { authGoogleContex } from "../contexts/authGoogle";
+
 function Login() {
-    const {signed,logout,login,user,LoginSenha,log } = useContext(authGoogleContex); 
+    const {signed,logout,login,user,LoginSenha,log,loanding } = useContext(authGoogleContex); 
         const [active, setModel] = useState(false)
         const toggleModel = () => {
             setModel(!active)
@@ -22,7 +23,6 @@ function Login() {
         }else{
         return (
             <section  >
-
                 <div className={active ? "container sign-up-mode " : 'container'}>
                     <div className="forms-container">
                         <div className="signin-signup">

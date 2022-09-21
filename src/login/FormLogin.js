@@ -18,6 +18,7 @@ function FormLogin() {
     async function sair(){
         await logout()
     }
+    
     return (
         <>
             <form action="#" className="sign-in-form">

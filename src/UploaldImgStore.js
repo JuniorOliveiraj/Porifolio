@@ -2,7 +2,7 @@ import "./App.css";
 import './css/styleMenu.css'
 import videoBg from './assets/ElementsBackground.mp4'
 import { storage } from "./firebase";
-import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
+import { ref, getDownloadURL, uploadBytesResumable,getStorage } from "firebase/storage";
 import { useState,useEffect } from "react";
 import Tubar from "./menu-home/Tubar";
 import ListItensMenu from "./menu-home/ListItensMenu";
@@ -47,7 +47,7 @@ function UploaldImgStore() {
       }
     );
   };
-
+  
 
 
   return (

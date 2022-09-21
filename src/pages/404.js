@@ -1,22 +1,24 @@
-
+import { ContainerHomeCenter } from "../containr/container1"
 import { Link } from "react-router-dom"
+import '../css/404.css'
 function NotFalPage() {
 
 
 
     return (
 
-        <div className="table mainbox">
-            <div className="table-cell">
-                <div className="holder">
-                    <h2 className="notPage">Page not found</h2>
-                    <h1 className="N44"> 404</h1>
-                    <h2 className="notPage">Sorry, there's nothing to see here.</h2>
-                    <Link to='/'><button className="goHome"  > GO HOME</button></Link>
-                </div>
-            </div>
-        </div>
+
+        <section className="container404">
+            
+                <div className="D404 D404_Text" title="404">404</div>
+                <div className="D404 D44_button" title="404" style={{marginTop: "-150px"}}><Link to='/'><button className="goHome"  > GO HOME</button></Link></div>
+          
+        </section>
+
+
 
     )
 }
 export default NotFalPage
+
+

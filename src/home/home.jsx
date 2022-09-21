@@ -5,7 +5,6 @@ import UploaldImgStore from "../UploaldImgStore";
 import Tubar from "../menu-home/Tubar";
 import ListItensMenu from "../menu-home/ListItensMenu";
 import { ContainerHomeCenter, ContainerHomeBluerSombra } from "../containr/container1";
-
 import { Navigate, Outlet } from 'react-router-dom';
 import { authGoogleContex } from "../contexts/authGoogle";
 import {useContext ,useState} from 'react';
@@ -25,6 +24,7 @@ function Home() {
       </ContainerHomeCenter>
       <UploaldImgStore/> 
       {user?.email}
+
     </div>
   );
 }

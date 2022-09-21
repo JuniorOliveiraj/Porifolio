@@ -17,6 +17,7 @@ export const AuthGoogle = ({ children }) => {
         const [registerPassword, setRegisterPassword] = useState("");
         const [loginEmail, setLoginEmail] = useState("");
         const [loginPassword, setLoginPassword] = useState("");
+        const {loanding,setLoanding } = useState(false)
        const [user, setUser] = useState(null)
         onAuthStateChanged(auth, (currentUser) => {
           setUser(currentUser);
@@ -26,13 +27,15 @@ export const AuthGoogle = ({ children }) => {
         const register = async (registerEmail, registerPassword) => {
             try {
             const user = await createUserWithEmailAndPassword(auth,registerEmail,registerPassword)
+                    setLoanding(true)
                     setUser(user)
                     sessionStorage.setItem("@AuthFirebase: user", JSON.stringify(user))
+                    setLoanding(false)
             } catch (error) {
                 console.log(error.message)
                 alert(error)
             }
-    }
+         }
       
         const login = async ( loginEmail, loginPassword) => {
           try {
@@ -60,7 +63,7 @@ export const AuthGoogle = ({ children }) => {
  
     return (
         <authGoogleContex.Provider
-            value={{ signed: !!user,logout,login,register,user   }}>
+            value={{ signed: !!user,logout,login,register,user,loanding   }}>
             {children}
         </authGoogleContex.Provider>
     )

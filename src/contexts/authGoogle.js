@@ -1,7 +1,7 @@
 import { useState, useEffect, createContext } from 'react';
 
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -120,7 +120,12 @@ const register  = async (registerEmail, registerPassword,nameRegister) => {
     };
     const log = auth.currentUser;
    //   {user?.email}
-  
+  /* ****************************************************
+        DWLOAND URL IMG
+  ****************************************************************************************/
+
+
+
     
     return (
         <authGoogleContex.Provider

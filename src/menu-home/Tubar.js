@@ -85,11 +85,12 @@ export const MenuDesctopStyle = styled.div`
 	display:block;
 	text-decoration:none;
 	font-weight: 900;
-	color: #fff;
+	color: black;
 	font-size:12px;
 	line-height:32px;
-	padding:0 15px;
+	padding:0 10px 0 10px;
 	font-family: 'Montserrat', sans-serif;
+	
 	
 }
 
@@ -97,36 +98,37 @@ export const MenuDesctopStyle = styled.div`
 {
 	position:relative;
 	float:left;
-	margin:0;
-	padding:0
-	
+	margin:0 20px 0 0;
+	padding:0 10px 0 10px;
 	
 }
 
 #primary_nav_wrap ul li.current-menu-item
 {
-	background: #181717;
-	
+	background: #ffff;
     border-radius: 10px;
+	color:black
 }
 
 #primary_nav_wrap ul li:hover
 {
-	background: #181717;
+	background: #f0f0f0;
     border-radius: 10px;
+	
+	color:black
 }
 
 	
 	transition: all 0.3s ease-out;
-		@media screen and (max-width: 650px) {{
+		@media screen and (max-width: 650px) {
 			display:none;
 		
-		}}
+		}
 
 		
 	
 	transition: all 0.3s ease-out;
-	@media screen and (max-width: 850px) {{
+	@media screen and (max-width: 850px) {
 			right: 0px;
 			#primary_nav_wrap ul{
 			

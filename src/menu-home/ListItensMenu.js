@@ -12,7 +12,6 @@ function ListItensMenu (){
         await logout()
     }
 
-   console.log(user)
    
     return(
         <div className="nav">
