@@ -17,5 +17,6 @@ function PhotoItens(url, name){
             </Card.Body>
         </Card>
     </ContainerHomeCenter>
+    
     )
 }export default PhotoItens
