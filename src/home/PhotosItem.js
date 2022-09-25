@@ -1,5 +1,4 @@
 import { ContainerHomeCenter } from "../containr/container1"
-import Card from 'react-bootstrap/Card';
 function PhotoItens(url, name){
     console.log(url)
     return(
