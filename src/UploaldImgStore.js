@@ -8,7 +8,6 @@ import Tubar from "./menu-home/Tubar";
 import ListItensMenu from "./menu-home/ListItensMenu";
 import { ContainerHomeCenter, ContainerHomeBluerSombra } from "./containr/container1";
 
-import Button from 'react-bootstrap/Button';
 
 
 
