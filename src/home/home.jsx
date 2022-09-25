@@ -5,83 +5,101 @@ import UploaldImgStore from "../UploaldImgStore";
 import Tubar from "../menu-home/Tubar";
 import ListItensMenu from "../menu-home/ListItensMenu";
 import { ContainerHomeCenter, ContainerHomeBluerSombra } from "../containr/container1";
-import { Navigate, Outlet } from 'react-router-dom';
 import { authGoogleContex } from "../contexts/authGoogle";
-import {useContext ,useState} from 'react';
-import { getStorage, ref, getDownloadURL,list  } from "firebase/storage";
+import {useContext ,useState,useEffect} from 'react';
+import { getStorage, ref, getDownloadURL,listAll  } from "firebase/storage";import { storage } from "../firebase";
 import  LoadingApp from '../loanding/loanding'
-
+import * as Photos  from "../contexts/galeriDePhotos";
+import PhotoItens from "./PhotosItem";
 function Home() {
-  const storage = getStorage();
   const {signed,logout,login,user } = useContext(authGoogleContex); 
   const [loand, setLoand] = useState(false)
-  getDownloadURL(ref(storage,'/imagens/god-of-war-2-wallpaper-full-hd-1920x1080-kratos_mjh6.h960.png'))
-    .then((url) => {
-      // `url` is the download URL for 'images/stars.jpg'
-      
-      // This can be downloaded directly:
-      const xhr = new XMLHttpRequest();
-      if(url == null){
-        setLoand = false
-        console.log('sasa')
-      }
-      xhr.responseType = 'blob';
-      xhr.onload = (event) => {
-        const blob = xhr.response;
-      };
-      xhr.open('GET', url);
-      xhr.send();
-
-  
-      // Or inserted into an <img> element
-      const img = document.getElementById('myimg');
-      img.setAttribute('src', url);
-      if(url != null){
-        setLoand = true
-        console.log('sasa')
-      }
-
-    })
-    .catch((error) => {
-         // A full list of error codes is available at
-// https://firebase.google.com/docs/storage/web/handle-errors
-switch (error.code) {
-  case 'storage/object-not-found':
-    console.log('storage/object-not-found')
-    break;
-  case 'storage/unauthorized':
-    // User doesn't have permission to access the object 
-    console.log('unauthorized')
-    break;
-  case 'storage/canceled':
-    // User canceled the upload
-  console.log('canceled')
-    break;
-
-  // ...
-
-  case 'storage/unknown':
-    // Unknown error occurred, inspect the server response
-     console.log('unknown')
-    break;
-}
-    });
-
+  const [photos, setphotos] = useState([])
+  useEffect(() => {
+    const getPhotos = async ()=>{
+      setLoand (true );
+      setphotos( await Photos.getAll());
+      setLoand( false );
+    };getPhotos()
+  }, []);
+  console.log(photos.length)
   return (
     <div className="App">
       <Tubar />
+      
       <ListItensMenu />
+
       <ContainerHomeCenter>
-          {!setLoand ? <LoadingApp/> : ""}
+      {loand &&
+           <LoadingApp/>
+          }
         <ContainerHomeBluerSombra></ContainerHomeBluerSombra>
         <video className='videoBg' src={videoBg} autoPlay loop muted />
         <div className='containerText-videobg'> <h1>Developer <br /><span>Junior</span></h1></div>
       </ContainerHomeCenter>
       <UploaldImgStore/> 
       {user?.email}
-      <img id="myimg" />
+      {!loand && photos.length > 0 &&
+      <>
+          {photos.map((item,index)=>(
+            <PhotoItens key={index} url={item.url} name={item.name} />
+          ))}
+      </>
+      }
+     
     </div>
   );
 }
-
 export default Home;
+
+//   getDownloadURL(ref(storage,'/imagens/god-of-war-2-wallpaper-full-hd-1920x1080-kratos_mjh6.h960.png'))
+//     .then((url) => {
+//       // `url` is the download URL for 'images/stars.jpg'
+      
+//       // This can be downloaded directly:
+//       const xhr = new XMLHttpRequest();
+//       if(url == null){
+//         setLoand = false
+//         console.log('sasa')
+//       }
+//       xhr.responseType = 'blob';
+//       xhr.onload = (event) => {
+//         const blob = xhr.response;
+//       };
+//       xhr.open('GET', url);
+//       xhr.send();
+
+  
+//       // Or inserted into an <img> element
+//       const img = document.getElementById('myimg');
+//       img.setAttribute('src', url);
+//       if(url != null){
+//         setLoand = true
+//         console.log('sasa')
+//       }
+
+//     })
+//     .catch((error) => {
+//          // A full list of error codes is available at
+// // https://firebase.google.com/docs/storage/web/handle-errors
+// switch (error.code) {
+//   case 'storage/object-not-found':
+//     console.log('storage/object-not-found')
+//     break;
+//   case 'storage/unauthorized':
+//     // User doesn't have permission to access the object 
+//     console.log('unauthorized')
+//     break;
+//   case 'storage/canceled':
+//     // User canceled the upload
+//   console.log('canceled')
+//     break;
+
+//   // ...
+
+//   case 'storage/unknown':
+//     // Unknown error occurred, inspect the server response
+//      console.log('unknown')
+//     break;
+// }
+//     });

@@ -8,7 +8,7 @@ import Tubar from "./menu-home/Tubar";
 import ListItensMenu from "./menu-home/ListItensMenu";
 import { ContainerHomeCenter, ContainerHomeBluerSombra } from "./containr/container1";
 
-
+import Button from 'react-bootstrap/Button';
 
 
 
@@ -55,7 +55,7 @@ function UploaldImgStore() {
 
       <form onSubmit={handleSubmit}>
         <input type="file"   accept="image/png, image/jpeg" multiple/>
-        <button>Enviar</button>
+        <button variant="primary">Enviar</button>
       </form>
       {!imgURL && <p>{progressPorcent}%</p>}
       {imgURL && <img src={imgURL} alt="Imagem" height={200} />}
