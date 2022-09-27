@@ -22,23 +22,24 @@ function ViewPrincipal() {
     const teste = () =>{setIsHovering(false);}
     const handleMouseOver = () => { setIsHovering(true);};
     const handleMouseOut = () => { setIsHovering(false);};
-    const handleMouseOverText = () => { setIsHoveringText(true);};
-    const handleMouseOutText = () => { setIsHoveringText(false);};
+    const handleMouseOverText = () => { setIsHoveringText(true);setIsHovering(true) };
+    const handleMouseOutText = () => { setIsHoveringText(false); setIsHovering(false);};
     // if(isHovering == false){ onMouseMove()}
-    return (
 
+    return (
+        <div className={isHovering ? "invertColorContainer": "invertColorContainer active"}>
         <ContainerHomeCenter onMouseMove={isHovering ? onMouseMove : teste}  >
             <ViewlCursor onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}></ViewlCursor>
 
             <ContainerHomeBluerSombra  ></ContainerHomeBluerSombra>
             <video className='videoBg' src={videoBg} autoPlay loop muted />
             <div className={isHovering ? "cursor ": "cursor active"}  id="cursor"></div>
-		    <div className={isHovering ? "cursor2 ":isHoveringText ? "cursor2 hover":"cursor2 active" } id="cursor2"></div>
-		    <div className={isHovering ? "cursor3 ": isHoveringText ? "cursor2 hover":"cursor2 active" }  id="cursor3"></div>
+		    <div className={isHoveringText ? "cursor2 hover":"cursor2" } id="cursor2"></div>
+		    <div className={isHoveringText ? "cursor3 hover":"cursor3" }  id="cursor3"></div>
             <div className='containerText-videobg '> <h1  onMouseOver={handleMouseOverText} onMouseOut={handleMouseOutText}>Developer <br /><span>Junior</span></h1></div>
             
         </ContainerHomeCenter>
-
+    </div>
     )
 } export default ViewPrincipal
 
@@ -55,7 +56,7 @@ export const ViewlCursor = styled.div`
   justify-content: center;
   align-items: center;
   //border: 6px solid red;
- // background-color: red;;
- z-index: 14;
+   //  background-color: red;;
+ z-index: 3;
 
 `
