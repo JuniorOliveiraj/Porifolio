@@ -1,12 +1,23 @@
 import { ContainerHomeCenter } from "../containr/container1"
-function PhotoItens(url, name){
-    console.log(url)
-    return(
-        
-        <ContainerHomeCenter style={{}}>
-            <img style={{margin:10, width:"10rem",borderRadius:"10px" }} src={url.url} alt={name.name} />
+function PhotoItens(url,index) {
+    console.log(url,)
+    return (
 
-         </ContainerHomeCenter>
+        <ContainerHomeCenter style={{}}>
+            
+            <div>
+                <img style={{ margin: 10, width: "10rem", borderRadius: "10px" }} src={url.url}  />
+                <p>{url.name}</p>
+            </div>
+            <div className="invertColorContainer"></div>
+            <div id="cursor"></div>
+
+        </ContainerHomeCenter>
 
     )
-}export default PhotoItens
+} export default PhotoItens
+
+
+
+
+

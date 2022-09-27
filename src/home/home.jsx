@@ -1,10 +1,10 @@
 import "../App.css";
 import '../css/styleMenu.css'
-import videoBg from '../assets/ElementsBackground.mp4'
+import ViewPrincipal from "./containerPrincipal";
 import UploaldImgStore from "../UploaldImgStore";
 import Tubar from "../menu-home/Tubar";
 import ListItensMenu from "../menu-home/ListItensMenu";
-import { ContainerHomeCenter, ContainerHomeBluerSombra } from "../containr/container1";
+
 import { authGoogleContex } from "../contexts/authGoogle";
 import {useContext ,useState,useEffect} from 'react';
 import { getStorage, ref, getDownloadURL,listAll  } from "firebase/storage";import { storage } from "../firebase";
@@ -22,21 +22,16 @@ function Home() {
       setLoand( false );
     };getPhotos()
   }, []);
-  console.log(photos.length)
+  //console.log(photos.length)
   return (
     <div className="App">
       <Tubar />
-      
       <ListItensMenu />
-
-      <ContainerHomeCenter>
       {loand &&
            <LoadingApp/>
           }
-        <ContainerHomeBluerSombra></ContainerHomeBluerSombra>
-        <video className='videoBg' src={videoBg} autoPlay loop muted />
-        <div className='containerText-videobg'> <h1>Developer <br /><span>Junior</span></h1></div>
-      </ContainerHomeCenter>
+      <ViewPrincipal/>
+      
       <UploaldImgStore/> 
       {user?.email}
       {!loand && photos.length > 0 &&
