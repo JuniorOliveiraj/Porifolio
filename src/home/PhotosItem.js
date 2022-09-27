@@ -3,7 +3,7 @@ function PhotoItens(url,index) {
     console.log(url,)
     return (
 
-        <ContainerHomeCenter style={{}}>
+        <ContainerHomeCenter style={{ height:300}}>
             
             <div>
                 <img style={{ margin: 10, width: "10rem", borderRadius: "10px" }} src={url.url}  />

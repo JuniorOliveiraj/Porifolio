@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ContainerHomeCenter = styled.div`
-height: 100hv;
+height: 100vh;
 width: 100%;
 margin: 0;
 align-items: center;
