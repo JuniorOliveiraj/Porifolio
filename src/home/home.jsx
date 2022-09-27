@@ -13,17 +13,9 @@ import * as Photos  from "../contexts/galeriDePhotos";
 import PhotoItens from "./PhotosItem";
 import Vhone from "./vh/vh1";
 function Home() {
-  const {signed,logout,login,user } = useContext(authGoogleContex); 
-  const [loand, setLoand] = useState(false)
-  const [photos, setphotos] = useState([])
-  useEffect(() => {
-    const getPhotos = async ()=>{
-      setLoand (true );
-      setphotos( await Photos.getAll());
-      setLoand( false );
-    };getPhotos()
-  }, []);
-  //console.log(photos.length)
+  const {signed,logout,login,user,photos,loand } = useContext(authGoogleContex); 
+
+
   return (
     <div className="App">
       <Tubar />
@@ -35,14 +27,10 @@ function Home() {
       
       <UploaldImgStore/> 
       {user?.email}
-      {!loand && photos.length > 0 &&
-      <>
-          {photos.map((item,index)=>(
-            <PhotoItens key={index} url={item.url} name={item.name} />
-          ))}
-      </>
-      }
-     <Vhone/>
+       {!loand && photos.length > 0 &&
+        <Vhone/>
+      } 
+     
     </div>
   );
 }

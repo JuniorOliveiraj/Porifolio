@@ -11,7 +11,7 @@ import {
 
 import { Navigate } from 'react-router-dom';
 import { auth } from "../firebase";
-
+import * as Photos  from "../contexts/galeriDePhotos";
 
 
 export const authGoogleContex = createContext({});
@@ -123,7 +123,15 @@ const register  = async (registerEmail, registerPassword,nameRegister) => {
   /* ****************************************************
         DWLOAND URL IMG
   ****************************************************************************************/
-
+        const [loand, setLoand] = useState(false)
+        const [photos, setphotos] = useState([])
+        useEffect(() => {
+          const getPhotos = async ()=>{
+            setLoand (true );
+            setphotos( await Photos.getAll());
+            setLoand( false );
+          };getPhotos()
+        }, []);
   
         
 
@@ -132,7 +140,7 @@ const register  = async (registerEmail, registerPassword,nameRegister) => {
     
     return (
         <authGoogleContex.Provider
-            value={{ signed: !!user, user,  auth,logout,login,log,LoginSenha,register }}>
+            value={{ signed: !!user, user,  auth,logout,login,log,LoginSenha,register,loand,photos }}>
             {children}
         </authGoogleContex.Provider>
          

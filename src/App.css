@@ -96,7 +96,10 @@ a:hover {
     height: 70vh;
     object-fit: cover;  
   
+  }.teste00000{
+    display: none!important;
   }
+
  
 }
 
