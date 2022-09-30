@@ -55,7 +55,7 @@ function Home() {
                 <Timeline
                   target={
                     <>
-                      <h1>Junior Oliveira developer Web</h1>
+                      <h1>Junior Oliveira Developer Web</h1>
                       <h4>Desenvolvendo em React </h4>
                       <div className="call-actions">
                         <CallToActionButtons />
