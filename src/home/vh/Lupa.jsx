@@ -23,7 +23,6 @@ function Lupa() {
     const handleMouseOverText = () => { setActivateCursorText(true); setActivateCursor(true) };
     const handleMouseOutText = () => { setActivateCursorText(false); setActivateCursor(false); };
     // if(activateCursor == false){ onMouseMove()}
-    console.log(activateCursor)
 
     return (
             
@@ -33,7 +32,7 @@ function Lupa() {
                 <div className={activateCursorText ? "cursor2 hover" : "cursor2"} id="cursor2"></div>
                 <div className={activateCursorText ? "cursor3 hover" : "cursor3"} id="cursor3"></div>
                
-                <ContainerText > <h1 onMouseOver={handleMouseOverText} onMouseOut={handleMouseOutText}>Developer <br /><span>Junior</span></h1></ContainerText>
+                <ContainerText > <h1 onMouseOver={handleMouseOverText} onMouseOut={handleMouseOutText}>hover <br /><span>me</span></h1></ContainerText>
                
 
             </ContainerCenter>
@@ -51,14 +50,14 @@ display: flex;
 text-align: center;
 justify-content: center;
 background-color:#0c0c0c;
-border: 5px solid #ffffff;
+//border: 5px solid #ffffff;
 
 
 `
 export const ContainerText = styled.div`
-width: 70%;
+width: 20%;
 height: auto;
-background-color:#ffffff ;
+//background-color:#ffffff ;
 top: 0;
 font-size: 2rem;
 
