@@ -56,7 +56,7 @@ function Home() {
                   target={
                     <>
                       <h1>Junior Oliveira Developer Web</h1>
-                      <h4>Desenvolvendo em React </h4>
+                      <h4>Developed in React </h4>
                       <div className="call-actions">
                         <CallToActionButtons />
                       </div>
@@ -123,7 +123,7 @@ function Home() {
                     <>
                       <div className="shape1"></div>
                       <div className="shape2"></div>
-                      <div className="shape3"></div>
+                      <div className="shape3" ></div>
                     </>
                   }
                 >

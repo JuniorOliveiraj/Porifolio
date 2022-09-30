@@ -118,7 +118,9 @@
   height: 100px;
   transform: translate3d(600px, -300px, 0);
   border: 1px dashed white;
+  left: 20%;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  z-index: 1;
 }
 .shape3 {
   opacity: 0.6;
