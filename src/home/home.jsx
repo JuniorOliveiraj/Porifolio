@@ -107,14 +107,14 @@ function Home() {
                     target={0}
                     from={{ height: 0 }}
                     to={{ height: 600 }}
-                    duration={1.4}
+                    duration={0.9}
                     position="girl-start"
                   />
                   <Tween
                     target={1}
                     from={{ height: 0 }}
                     to={{ height: 600 }}
-                    duration={1.4}
+                    duration={0.9}
                     position="boy-start"
                   />
                 </Timeline>
@@ -159,7 +159,7 @@ function Home() {
                     target={1}
                     from={{ x: 550, y: -150 }}
                     to={{ y: -185 }}
-                    duration={1.5}
+                    duration={1}
                     repeat={-1}
                     yoyo
                   />
