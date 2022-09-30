@@ -12,6 +12,8 @@ import  LoadingApp from '../loanding/loanding'
 import * as Photos  from "../contexts/galeriDePhotos";
 import PhotoItens from "./PhotosItem";
 import Vhone from "./vh/vh1";
+import Lupa from "./vh/Lupa";
+import { ContainerHomeCenter } from "../containr/container1";
 function Home() {
   const {signed,logout,login,user,photos,loand } = useContext(authGoogleContex); 
 
@@ -30,7 +32,7 @@ function Home() {
        {!loand && photos.length > 0 &&
         <Vhone/>
       } 
-     
+      <Lupa/>
     </div>
   );
 }

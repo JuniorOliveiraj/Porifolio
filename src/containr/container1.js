@@ -9,7 +9,7 @@ text-align: center;
 display: flex;
 text-align: center;
 justify-content: center;
-z-index: 1;
+
 
 
 `;
