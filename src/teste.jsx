@@ -1,38 +1,11 @@
-import "../App.css";
-import '../css/styleMenu.css'
-import UploaldImgStore from "../UploaldImgStore";
-import Tubar from "../menu-home/Tubar";
-import ListItensMenu from "../menu-home/ListItensMenu";
-import { authGoogleContex } from "../contexts/authGoogle";
-import {useContext ,useState,useEffect} from 'react';
-import  LoadingApp from '../loanding/loanding'
-import Vhone from "./vh/vh1";
-import Lupa from "./vh/Lupa";
 import React from "react";
+import styled from "styled-components";
 import { Timeline, Controls, Tween } from "react-gsap";
-import "../css/styles.css";
-import videoBg from '../assets/ElementsBackground.mp4'
+import videoBg from './assets/ElementsBackground.mp4'
+import "./css/styles.css";
 
-
-
-
-
-
-
-
-function Home() {
-  const {signed,logout,login,user,photos,loand } = useContext(authGoogleContex); 
-
-
+const TesteHome = () => {
   return (
-    <div className="App">
-      <Tubar />
-      <ListItensMenu />
-      
-      {loand &&
-           <LoadingApp/>
-          }
-    
     <div>
       <Timeline
         labels={[
@@ -56,7 +29,7 @@ function Home() {
                   target={
                     <>
                       <h1>Junior Oliveira developer Web</h1>
-                      <h4>Desenvolvendo em React </h4>
+                      <h4>desenvolvendo em react \</h4>
                       <div className="call-actions">
                         <CallToActionButtons />
                       </div>
@@ -67,21 +40,21 @@ function Home() {
                     target={0}
                     from={{ x: "0px", y: "100px", opacity: 0 }}
                     to={{ x: "0px", y: "0px", opacity: 1 }}
-                    duration={0.9}
+                    duration={1.3}
                     position="header-end"
                   />
                   <Tween
                     target={1}
                     from={{ x: "-50px", opacity: 0 }}
                     to={{ x: "0px", opacity: 1 }}
-                    duration={0.9}
+                    duration={1.3}
                     position="h1Show"
                   />
                   <Tween
                     target={2}
                     from={{ x: "-50px", opacity: 0 }}
                     to={{ x: "0px", opacity: 1 }}
-                    duration={0.9}
+                    duration={1.3}
                     position="h1Show+=1"
                   />
                 </Timeline>
@@ -173,76 +146,24 @@ function Home() {
           
         </section>
       </Timeline>
-    </div>
-      <UploaldImgStore/> 
-      {user?.email}
-       {!loand && photos.length > 0 &&
-        <Vhone/>
-      } 
-      <Lupa/>
+
+      <section id="test"></section>
+      <footer id="animationPlayOnMountHack"></footer>
     </div>
   );
-}
+};
+
+
+
 const CallToActionButtons = () => (
   <>
     <a href="#" className="action-btn">
       Conhecer
     </a>
     <a href="#" className="action-ghost-btn">
-      contato
+      work
     </a>
   </>
 );
-export default Home;
 
-//   getDownloadURL(ref(storage,'/imagens/god-of-war-2-wallpaper-full-hd-1920x1080-kratos_mjh6.h960.png'))
-//     .then((url) => {
-//       // `url` is the download URL for 'images/stars.jpg'
-      
-//       // This can be downloaded directly:
-//       const xhr = new XMLHttpRequest();
-//       if(url == null){
-//         setLoand = false
-//         console.log('sasa')
-//       }
-//       xhr.responseType = 'blob';
-//       xhr.onload = (event) => {
-//         const blob = xhr.response;
-//       };
-//       xhr.open('GET', url);
-//       xhr.send();
-
-  
-//       // Or inserted into an <img> element
-//       const img = document.getElementById('myimg');
-//       img.setAttribute('src', url);
-//       if(url != null){
-//         setLoand = true
-//         console.log('sasa')
-//       }
-
-//     })
-//     .catch((error) => {
-//          // A full list of error codes is available at
-// // https://firebase.google.com/docs/storage/web/handle-errors
-// switch (error.code) {
-//   case 'storage/object-not-found':
-//     console.log('storage/object-not-found')
-//     break;
-//   case 'storage/unauthorized':
-//     // User doesn't have permission to access the object 
-//     console.log('unauthorized')
-//     break;
-//   case 'storage/canceled':
-//     // User canceled the upload
-//   console.log('canceled')
-//     break;
-
-//   // ...
-
-//   case 'storage/unknown':
-//     // Unknown error occurred, inspect the server response
-//      console.log('unknown')
-//     break;
-// }
-//     });
+export default TesteHome;
