@@ -12,7 +12,6 @@ import React from "react";
 import { Timeline, Controls, Tween } from "react-gsap";
 import "../css/styles.css";
 import videoBg from '../assets/ElementsBackground.mp4'
-import testeFoto from '../assets/teste.jpg'
 import { storage } from "../firebase";
 import { getDownloadURL,ref } from "firebase/storage";
 
