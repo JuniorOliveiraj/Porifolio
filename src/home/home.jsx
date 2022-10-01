@@ -14,9 +14,7 @@ import "../css/styles.css";
 import videoBg from '../assets/ElementsBackground.mp4'
 import { storage } from "../firebase";
 import { getDownloadURL,ref } from "firebase/storage";
-
-
-
+import ScroolSvgZoom from "./vh/scrollSvgZoom";
 
 
 
@@ -172,10 +170,10 @@ function Home() {
             </div>
             
           </div>
-          
         </section>
       </Timeline>
     </div>
+      <ScroolSvgZoom/>
       <UploaldImgStore/> 
       {user?.email}
        {!loand && photos.length > 0 &&

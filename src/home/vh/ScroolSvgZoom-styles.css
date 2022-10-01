@@ -1,0 +1,21 @@
+.hero {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1569171206684-dfb2749d96fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  .logo {
+  
+    background-size: contain;
+    overflow: hidden;
+    width: 100%;
+
+  }
+  
+
+  
+  
+  .section {
+    height: 100VH;
+  }
