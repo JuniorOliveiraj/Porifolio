@@ -1,11 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
-
-@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-
-
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap');
 
 .containerTest {
   max-width: 1400px;
@@ -30,10 +23,14 @@
 
 
 #home .info-section h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 900;
   color: white;
   margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  
+  
 }
 #home .info-section h4 {
   font-size: 1.1rem;
@@ -41,6 +38,7 @@
   color: white;
   margin-bottom: 2rem;
   letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
 }
 #home .info-section .call-actions {
   display: flex;
@@ -75,7 +73,7 @@
   position: relative;
   height: 400px;
 }
-#home .photos .girl {
+#home .photos .Foto1 {
   position: absolute;
   width: 400px;
   height: 0;
@@ -98,7 +96,7 @@
   cursor: pointer;
 }
 #home .photos .boy:hover,
-#home .photos .girl:hover {
+#home .photos .Foto1:hover {
   filter: blur(35px);
 }
 
@@ -188,7 +186,7 @@
 
 @media screen and (max-width: 1720px) {
   #home .info-section h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   color: white;
   margin-bottom: 2rem;

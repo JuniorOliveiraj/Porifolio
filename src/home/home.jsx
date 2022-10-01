@@ -12,8 +12,9 @@ import React from "react";
 import { Timeline, Controls, Tween } from "react-gsap";
 import "../css/styles.css";
 import videoBg from '../assets/ElementsBackground.mp4'
-
-
+import testeFoto from '../assets/teste.jpg'
+import { storage } from "../firebase";
+import { getDownloadURL,ref } from "firebase/storage";
 
 
 
@@ -91,12 +92,14 @@ function Home() {
                   target={
                     <>
                       <img
-                        src="https://images.pexels.com/photos/4380970/pexels-photo-4380970.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=236&w=400"
+                        src=""
                         alt=""
-                        className="girl"
+                        id="Foto1"
+                        className="Foto1"
                       />
                       <img
-                        src="https://images.pexels.com/photos/4445686/pexels-photo-4445686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=236&w=400"
+                      id="Foto2"
+                        src=""
                         alt=""
                         className="boy"
                       />
@@ -195,54 +198,33 @@ const CallToActionButtons = () => (
 );
 export default Home;
 
-//   getDownloadURL(ref(storage,'/imagens/god-of-war-2-wallpaper-full-hd-1920x1080-kratos_mjh6.h960.png'))
-//     .then((url) => {
-//       // `url` is the download URL for 'images/stars.jpg'
-      
-//       // This can be downloaded directly:
-//       const xhr = new XMLHttpRequest();
-//       if(url == null){
-//         setLoand = false
-//         console.log('sasa')
-//       }
-//       xhr.responseType = 'blob';
-//       xhr.onload = (event) => {
-//         const blob = xhr.response;
-//       };
-//       xhr.open('GET', url);
-//       xhr.send();
-
-  
-//       // Or inserted into an <img> element
-//       const img = document.getElementById('myimg');
-//       img.setAttribute('src', url);
-//       if(url != null){
-//         setLoand = true
-//         console.log('sasa')
-//       }
-
-//     })
-//     .catch((error) => {
-//          // A full list of error codes is available at
-// // https://firebase.google.com/docs/storage/web/handle-errors
-// switch (error.code) {
-//   case 'storage/object-not-found':
-//     console.log('storage/object-not-found')
-//     break;
-//   case 'storage/unauthorized':
-//     // User doesn't have permission to access the object 
-//     console.log('unauthorized')
-//     break;
-//   case 'storage/canceled':
-//     // User canceled the upload
-//   console.log('canceled')
-//     break;
-
-//   // ...
-
-//   case 'storage/unknown':
-//     // Unknown error occurred, inspect the server response
-//      console.log('unknown')
-//     break;
-// }
-//     });
+getDownloadURL(ref(storage,'/fotosHome/111629755386552.jpg'))
+    .then((url) => {
+      const xhr = new XMLHttpRequest();
+      xhr.responseType = 'blob';
+      xhr.onload = (event) => {
+        const blob = xhr.response;
+      };
+      xhr.open('GET', url);
+      xhr.send();
+      const img = document.getElementById('Foto1');
+      img.setAttribute('src', url);
+      console.log(url)
+    })
+    .catch((error) => {
+});
+getDownloadURL(ref(storage,'/fotosHome/c1f0b8fa55bfbd65377ab86976ea5e57.jpg'))
+    .then((url) => {
+      const xhr = new XMLHttpRequest();
+      xhr.responseType = 'blob';
+      xhr.onload = (event) => {
+        const blob = xhr.response;
+      };
+      xhr.open('GET', url);
+      xhr.send();
+      const img = document.getElementById('Foto2');
+      img.setAttribute('src', url);
+      console.log(url)
+    })
+    .catch((error) => {
+});
