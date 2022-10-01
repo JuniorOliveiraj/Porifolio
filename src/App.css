@@ -34,11 +34,25 @@ a {
 a:hover {
 	text-decoration: none;
 }
+.videoBg2{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  filter: blur(4px);
+  opacity: 0.1;
+
+}
 .videoBg{
   width: 100%;
   height: 100vh;
   object-fit: cover;
   filter: blur(4px);
+  z-index: 0;
+
 }
 .containerText-videobg{
   position: absolute;
@@ -49,6 +63,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 
   
 }
@@ -68,7 +83,7 @@ a:hover {
   -webkit-transition: all 0.7s ease-in-out;
   -o-transition: all 0.7s ease-in-out;
   transition: all 1s ease-in-out; 
-  z-index: 3;
+  z-index: 0;
  
 }
 @media screen and (max-width: 1260px)  {

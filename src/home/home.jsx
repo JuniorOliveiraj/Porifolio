@@ -55,7 +55,7 @@ function Home() {
                 <Timeline
                   target={
                     <>
-                      <h1>Junior Oliveira Developer Web</h1>
+                      <h1>Junior Oliveira <br/> Developer Web</h1>
                       <h4>Developed in React </h4>
                       <div className="call-actions">
                         <CallToActionButtons />
@@ -168,7 +168,7 @@ function Home() {
                 </Timeline>
                 
               </div>
-              
+              <video className='videoBg2' src={videoBg} autoPlay loop muted />
             </div>
             
           </div>
