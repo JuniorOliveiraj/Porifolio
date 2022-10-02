@@ -4,6 +4,8 @@ import { ContainerHomeCenter } from "../../containr/container1";
 import { gsap, Power2, Back } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import SlideOne from "./Slides/slideOne";
+import SlideTwo from "./Slides/slideTwo";
+import SlideTree from "./Slides/slideTree";
 import bg from '../../assets/66bf15b68e2ae9864bdb3f4ecf54c370.jpg'
 export default function App() {
   gsap.registerPlugin(ScrollTrigger);

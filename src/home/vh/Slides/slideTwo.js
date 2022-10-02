@@ -1,29 +1,28 @@
 import { ContainerHomeCenter } from "../../../containr/container1"
 import styled from "styled-components"
-function SlideOne (){
+function SlideTwo (){
 
 
     return(
-        <ContaienrOne>
-           one 
-        </ContaienrOne>
+        <ContaienrTwo>
+            Two
+        </ContaienrTwo>
           
         
     )
-}export default SlideOne
+}export default SlideTwo
 
 
-export const ContaienrOne = styled.div`
+export const ContaienrTwo = styled.div`
 
 position: absolute;
-    background: rgb(255, 75, 75);
-    display: flex;
+    background: red;
     height: 100%;
     width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
     color: white;
-    z-index: 0;
-    overflow: hidden !important;
+    z-index: 1;
 `
