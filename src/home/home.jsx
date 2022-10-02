@@ -16,7 +16,7 @@ import { storage } from "../firebase";
 import { getDownloadURL,ref } from "firebase/storage";
 import ScroolSvgZoom from "./vh/scrollSvgZoom";
 import ScrollSlide from "./vh/ScrollSlide";
-import ViewPrincipal from "./containerPrincipal";
+
 
 function Home() {
   const {signed,logout,login,user,photos,loand } = useContext(authGoogleContex); 
