@@ -54,7 +54,7 @@ function Home() {
                   target={
                     <>
                       <h1>Junior Oliveira <br/> Developer Web</h1>
-                      <h4>Developed in React </h4>
+                      <h4>Developed in React. </h4>
                       <div className="call-actions">
                         <CallToActionButtons />
                       </div>
