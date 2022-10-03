@@ -1,6 +1,6 @@
 .containerScroll {
     text-align: center;
-  
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,11 +9,16 @@
   
   .coin {
     height: 65px;
+    z-index: 1;
   }
   
   .linecontainer {
     display: grid;
     place-content: center;
+    position: absolute;
+    z-index: 0;
+    
+    width: 0.1px;
   }
   
   .pathMobile {
@@ -25,3 +30,7 @@
       display: none;
     } */
   }
+  .theline{
+    width: 500px;
+  }
+

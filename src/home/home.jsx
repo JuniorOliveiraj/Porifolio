@@ -16,7 +16,7 @@ import { storage } from "../firebase";
 import { getDownloadURL,ref } from "firebase/storage";
 import ScroolSvgZoom from "./vh/scrollSvgZoom";
 import ScrollSlide from "./vh/ScrollSlide";
-
+import FallowScroll from "../MoveScroll/MoveScroll";
 function Home() {
   const {signed,logout,login,user,photos,loand } = useContext(authGoogleContex); 
 
@@ -172,9 +172,11 @@ function Home() {
         </section>
       </Timeline>
     </div>
+
       <ScroolSvgZoom/>
       <UploaldImgStore/> 
-      <ScrollSlide/>
+      <ScrollSlide/>    
+      <FallowScroll/>
       {user?.email}
        {!loand && photos.length > 0 &&
         <Vhone/>

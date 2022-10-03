@@ -4,9 +4,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import moveScroll from '../assets/move.png'
+import { display } from "@mui/system";
 export default function FallowScroll() {
   let linecontainer = useRef();
-  const scrollEnd = 7500;
+  const scrollEnd = 4500;
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
@@ -20,26 +21,31 @@ export default function FallowScroll() {
           trigger: linecontainer,
           start: "top top",
           end: `+=${scrollEnd}`,
-          scrub: 0.5,
+          scrub: 1,
           markers: true,
-          toggleActions: "play pause resume reset"
+          toggleActions: "play pause resume reset",
+          opacity:0
         }
       })
       .to(".coin", {
-        ease: "none",
+       
 
         motionPath: {
           path: ".theline",
           align: ".theline",
-          alignOrigin: [0.5, 0.5]
+          alignOrigin: [0.5, 0.5],
+          display:"none",
+          opacity:0,
+          display:'whiteSpace'
         },
         rotation: "+=360",
-        transformOrigin: "50% 50%"
+        transformOrigin: "25% 25%",
+        opacity:0
       });
   }, []);
 
   return (
-    <div className="containerScroll">
+    <div className="containerScroll" pin={true}>
       <div
         ref={(el) => {
           linecontainer = el;
@@ -67,6 +73,7 @@ export default function FallowScroll() {
             fill="none"
             stroke="#ccc"
             strokeWidth="5"
+            opacity={0}
           />
         </svg>
 
