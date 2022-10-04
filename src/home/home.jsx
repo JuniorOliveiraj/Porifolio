@@ -18,6 +18,7 @@ import ScroolSvgZoom from "./vh/scrollSvgZoom";
 import ScrollSlide from "./vh/ScrollSlide";
 import FallowScroll from "../MoveScroll/MoveScroll";
 import Teste from '../testesScrolls/variosExemplos'
+import Footer from '../footer/footer'
 function Home() {
   const {signed,logout,login,user,photos,loand } = useContext(authGoogleContex); 
 
@@ -184,7 +185,7 @@ function Home() {
       } 
       <Teste/>
       <Lupa/>
-
+      <Footer/>
     
     </div>
   );
