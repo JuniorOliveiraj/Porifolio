@@ -11,51 +11,7 @@ export default function App() {
   gsap.registerPlugin(ScrollTrigger);
   gsap.defaults({ ease: "none", duration: 2 });
 
-  const introAnimation = () => {
-    const hero = document.querySelector(".hero");
-    const slider = document.querySelector(".slider");
-    const logo = document.querySelector("#logo");
-    const hamburger = document.querySelector(".hamburger");
-    const headline = document.querySelector(".headline");
 
-    const tl1 = gsap.timeline();
-
-    tl1
-      .fromTo(
-        hero,
-        1.0,
-        { height: "0%" },
-        { height: "80%", ease: Power2.easeInOut }
-      )
-      .fromTo(
-        hero,
-        1.2,
-        { width: "100%" },
-        { width: "80%", ease: Power2.easeInOut }
-      )
-      .fromTo(
-        slider,
-        1.2,
-        { x: "-100%" },
-        { x: "0%", ease: Power2.easeOut },
-        "-=1.2"
-      )
-      .fromTo(logo, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-=0.5")
-      .fromTo(
-        hamburger,
-        0.5,
-        { opacity: 0, y: -40 },
-        { opacity: 1, y: 0 },
-        "-=0.5"
-      )
-      .fromTo(
-        headline,
-        0.5,
-        { opacity: 0, x: 100 },
-        { opacity: 1, x: 10, ease: Back.easeOut },
-        "-=0.5"
-      );
-  };
 
   const slideAnimation = () => {
     const container = document.querySelector("#container");
@@ -75,7 +31,7 @@ export default function App() {
       trigger: container,
       markers: false,
       start: "top top",
-      end: "+=4000",
+      end: "+=2000",
       scrub: 1,
       pin: true,
       anticipatePin: 1
@@ -83,12 +39,12 @@ export default function App() {
   };
 
   useEffect(() => {
-    introAnimation();
+   
     slideAnimation();
   }, []);
 
   return (
-    <div className="appa">
+    <div className="containerSlide">
   
 
 
@@ -103,10 +59,10 @@ export default function App() {
       <div className="canvas_tut">CANVAS</div>
       <div id="container">
         
-        <SlideOne/>
+        <SlideOne className="slide two"/>
         <div className="slide two">TWO</div>
         <div className="slide three">THREE</div>
-        <div className="slide four">FOUR</div>
+   
       </div>
     </div>
   );

@@ -17,6 +17,7 @@ import { getDownloadURL,ref } from "firebase/storage";
 import ScroolSvgZoom from "./vh/scrollSvgZoom";
 import ScrollSlide from "./vh/ScrollSlide";
 import FallowScroll from "../MoveScroll/MoveScroll";
+import Teste from '../testesScrolls/variosExemplos'
 function Home() {
   const {signed,logout,login,user,photos,loand } = useContext(authGoogleContex); 
 
@@ -49,7 +50,7 @@ function Home() {
           <div className="containerTest">
             <div className="content-area">
               <div className="info-section">
-                <Timeline
+                <Timeline 
                   target={
                     <>
                       <h1>Junior Oliveira <br/> Developer Web</h1>
@@ -181,7 +182,10 @@ function Home() {
        {!loand && photos.length > 0 &&
         <Vhone/>
       } 
+      <Teste/>
       <Lupa/>
+
+    
     </div>
   );
 }

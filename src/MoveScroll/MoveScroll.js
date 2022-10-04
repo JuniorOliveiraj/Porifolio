@@ -45,7 +45,7 @@ export default function FallowScroll() {
   }, []);
 
   return (
-    <div className="containerScroll" pin={true}>
+    <div className="containerScroll"  >
       <div
         ref={(el) => {
           linecontainer = el;

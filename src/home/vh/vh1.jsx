@@ -19,7 +19,7 @@ export default function TitlebarBelowMasonryImageList() {
    return (
       <ContainerHomeCenter>
          {photos.map((item) => (
-            <Card className={{Card:"teste00000"}} sx={{ maxWidth: 345, margin: 1,display:"flex" }}>
+            <Card  sx={{ maxWidth: 345, margin: 1,display:"flex" }}>
                <CardActionArea>
                   <CardMedia
                      component="img"
