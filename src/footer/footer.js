@@ -31,7 +31,7 @@ function Footer() {
 
             </div>
             
-            <div class="content flex">
+            <div class="contentFooter flex">
                 <p>teste de footer </p>
             </div>
         </footer>

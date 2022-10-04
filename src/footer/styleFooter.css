@@ -6,7 +6,7 @@
 .header {
   position:relative;
   text-align:center;
-  background: linear-gradient(60deg, rgb(45, 45, 46) 0%, rgba(8, 99, 56, 0.774) 100%);
+  background: linear-gradient(60deg, rgb(45, 45, 46) 0%, rgba(0,172,193,1) 100%);
   color:white;
 }
 .logo {
@@ -40,7 +40,7 @@
   max-height:150px;
 }
 
-.content {
+.contentFooter {
   position:relative;
   height:20vh;
   text-align:center;
@@ -82,7 +82,7 @@
     height:40px;
     min-height:40px;
   }
-  .content {
+  .contentFooter {
     height:30vh;
   }
   h1 {
