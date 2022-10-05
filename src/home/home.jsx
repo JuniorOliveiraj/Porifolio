@@ -178,13 +178,14 @@ function Home() {
       <ScroolSvgZoom/>
       <UploaldImgStore/> 
       <ScrollSlide/>    
-      <FallowScroll/>
+      {/* <FallowScroll/> */}
+        <Teste/>
       {user?.email}
        {!loand && photos.length > 0 &&
         <Vhone/>
       } 
-      <Teste/>
-      <Lupa/>
+    
+     
       <Footer/>
     
     </div>
