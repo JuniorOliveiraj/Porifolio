@@ -1,19 +1,11 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import ScrollTo from "gsap/ScrollToPlugin";
 import "./styleClickPage.css";
 
-gsap.registerPlugin(ScrollTrigger, ScrollTo);
 
-const sliderData = [
-  "https://images.unsplash.com/photo-1611660246350-e206e04bd966?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
-  "https://images.unsplash.com/photo-1611774017274-ec655f187ef3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1340&q=80",
-  "https://images.unsplash.com/photo-1611702700332-9af2ba35887c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
-  "https://images.unsplash.com/photo-1611764650125-5e4be2463de5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
-  "https://images.unsplash.com/photo-1611757790630-79892f4bce93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-];
+
+
 
 export default function Teste() {
   const text = useRef({ value: 1 });
@@ -32,7 +24,7 @@ export default function Teste() {
             onUpdate: (self) => {
               const clamp = gsap.utils.clamp(-10, 10);
               let skew = clamp(self.getVelocity() );
-              gsap.to("#section3 h1", { skewX: -skew });
+              gsap.to("#section3 h1", { 50: -50 });
             }
           }
         }
@@ -56,7 +48,7 @@ export default function Teste() {
 
 
     
-  }, [text]);
+  }, []);
 
   return (
     <div className="App">
