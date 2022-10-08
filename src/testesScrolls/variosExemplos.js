@@ -22,7 +22,7 @@ export default function Teste() {
             trigger: "#section3",
             scrub: 1,
             onUpdate: (self) => {
-              const clamp = gsap.utils.clamp(-10, 10);
+              const clamp = gsap.utils.clamp(-8, 8);
               let skew = clamp(self.getVelocity() );
               gsap.to("#section3 h1", { 50: -50 });
             }
@@ -33,17 +33,17 @@ export default function Teste() {
         "#section3 .move:first-of-type",
 
         {
-          xPercent: 80
+          xPercent: 60
         },
-        { xPercent: -40}
+        { xPercent: -30}
       )
       .fromTo(
         "#section3 .move:nth-of-type(2)",
  
         {
-          xPercent: -80
+          xPercent: -60
         },
-        { xPercent: 40}
+        { xPercent: 30}
       );
 
 

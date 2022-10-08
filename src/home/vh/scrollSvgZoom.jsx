@@ -90,5 +90,7 @@ color:#ffffff;
 font-family: 'Montserrat', sans-serif;
 font-weight: 700;
 text-transform: uppercase;
+opacity: 1;
+
 
 `
