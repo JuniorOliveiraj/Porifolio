@@ -21,8 +21,6 @@ import Teste from '../testesScrolls/variosExemplos'
 import Footer from '../footer/footer'
 function Home() {
   const {signed,logout,login,user,photos,loand } = useContext(authGoogleContex); 
-
-
   return (
     <div className="App">
       <Tubar />
