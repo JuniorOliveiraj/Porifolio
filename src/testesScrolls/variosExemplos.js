@@ -45,9 +45,6 @@ export default function Teste() {
         },
         { xPercent: 30}
       );
-
-
-    
   }, []);
 
   return (
