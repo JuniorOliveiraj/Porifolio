@@ -186,7 +186,6 @@ function Home() {
        {!loand && photos.length > 0 &&
         <Vhone/>
       } 
-    
      
       <Footer/>
     
