@@ -181,7 +181,6 @@ function Home() {
       <ScrollSlide/>   
       <UploaldImgStore/> 
       {/* <FallowScroll/> */}
-       
       {user?.email}
        {!loand && photos.length > 0 &&
         <Vhone/>
