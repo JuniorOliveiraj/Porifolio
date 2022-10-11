@@ -188,6 +188,8 @@ function Home() {
     
     </div>
   );
+        var me = this;
+        console.log(me);
 }
 const CallToActionButtons = () => (
   <>
