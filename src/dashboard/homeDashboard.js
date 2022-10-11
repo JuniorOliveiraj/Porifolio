@@ -9,12 +9,7 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
+import {AiOutlineMenu} from 'react-icons/ai'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -122,7 +117,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
-            <MailIcon />
+         
           </Badge>
         </IconButton>
         <p>Messages</p>
@@ -134,7 +129,6 @@ export default function PrimarySearchAppBar() {
           color="inherit"
         >
           <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
           </Badge>
         </IconButton>
         <p>Notifications</p>
@@ -147,7 +141,7 @@ export default function PrimarySearchAppBar() {
           aria-haspopup="true"
           color="inherit"
         >
-          <AccountCircle />
+          
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -165,7 +159,7 @@ export default function PrimarySearchAppBar() {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+           
           </IconButton>
           <Typography
             variant="h6"
@@ -177,7 +171,7 @@ export default function PrimarySearchAppBar() {
           </Typography>
           <Search>
             <SearchIconWrapper>
-              <SearchIcon />
+             
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
@@ -188,7 +182,7 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="error">
-                <MailIcon />
+                
               </Badge>
             </IconButton>
             <IconButton
@@ -197,7 +191,7 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
+           
               </Badge>
             </IconButton>
             <IconButton
@@ -209,7 +203,7 @@ export default function PrimarySearchAppBar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+            
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -221,7 +215,7 @@ export default function PrimarySearchAppBar() {
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <MoreIcon />
+             <AiOutlineMenu/>
             </IconButton>
           </Box>
         </Toolbar>
