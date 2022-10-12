@@ -3,14 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@mui/material": "^5.10.7",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/react": "^17.0.39",
-    "@types/react-dom": "^17.0.11",
+    "@emotion/cache": "11.10.3",
+    "@emotion/react": "11.10.4",
+    "@emotion/server": "11.10.0",
+    "@emotion/styled": "11.10.4",
+    "@mui/icons-material": "5.10.3",
+    "@mui/lab": "5.0.0-alpha.99",
+    "@mui/material": "5.10.5",
+    "@mui/system": "5.10.5",
+    "@mui/x-date-pickers": "5.0.1",
+    "@zalter/identity-js": "1.2.1",
+    "chart.js": "3.9.1",
+    "date-fns": "2.29.3",
+    "formik": "2.2.9",
+    "next": "12.3.0",
+    "nprogress": "0.2.0",
+    "prop-types": "15.8.1",
+    "react-chartjs-2": "4.3.1",
+    "react-perfect-scrollbar": "1.5.8",
+    "uuid": "9.0.0",
+    "yup": "0.32.11",
     "firebase": "^9.9.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -27,7 +39,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
+    "dev": "next",
+    "export": "next export",
+    "lint": "next lint",
+    "lint-fix": "next lint --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +65,8 @@
     ]
   },
   "devDependencies": {
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.0"
   }
 }
