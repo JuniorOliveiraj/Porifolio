@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
-//import NotificationsIcon from '@mui/icons-material/Notifications';
-//import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -21,7 +21,7 @@ function Header({ collapsed }) {
                     {/* <NotificationsIcon className="notifications"/> */}
                     <div className="user">
                         <h3>John Bayer</h3>
-                        {/* <AccountCircleIcon className="avatar"/> */}
+                        <AccountCircleIcon className="avatar"/>
                         <KeyboardArrowDownIcon className="arrow"/>
                     </div>
                 </div>
