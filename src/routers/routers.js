@@ -7,6 +7,7 @@ import NotFalPage from '../pages/404'
 //import HomeDashboard from '../dashboard/homeDashboard'
 //import Page from '../dashboard/pages'
 //import HomeDashboard from '../dashboard/homeDashboard'
+//import Dashboard2 from '../dashboard2/index'
 export default function AppRouters () {
   return (
     <BrowserRouter>
@@ -16,7 +17,7 @@ export default function AppRouters () {
             <Route path='/home'  href='/home' element={<Home/>}/>
           </Route>
           <Route path='*' element={<NotFalPage/>} />
-          {/* <Route path='/dashboard' element={<HomeDashboard/>} /> */}
+          {/* <Route path='/dashboard' element={<Dashboard2/>} /> */}
         </Routes>
     </BrowserRouter>
   )
