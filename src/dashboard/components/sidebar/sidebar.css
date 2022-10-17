@@ -1,0 +1,107 @@
+
+.side-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #1F2025;
+    width: 200px;
+    height: 100%;
+    padding: 30px 20px;
+    transition: all 0.2s ease-in;
+    z-index: 100;
+    box-shadow: 1px 0 2px #3d3d3d;
+}
+
+.side-menu.collapsed {
+    width: 70px;
+    padding: 30px 15px;
+}
+
+.side-menu .top-section {
+    position: relative;
+    height: 40px;
+}
+
+.top-section .logo {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.top-section .logo img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.top-section .toggle-menu-btn {
+    position: absolute;
+    background-color: #333;
+    height: 25px;
+    width: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.top-section .toggle-menu-btn.collapsed {
+    right: -45px;
+}
+
+.toggle-menu-btn .arrow{
+    color: #fff;
+    font-size: 25px;
+}
+
+.toggle-menu-btn.collapsed .arrow {
+    transform: rotate(180deg);
+}
+
+.side-menu .main-menu {
+    height: calc(100% - 40px);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-menu .main-menu ul {
+    list-style-type: none;
+}
+
+.side-menu .main-menu .menu-item {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.main-menu .menu-item.active {
+    border-right: 4px solid #2f98f6;
+}
+
+.side-menu .main-menu .menu-item.active {
+    color: #2f98f6;
+}
+
+.main-menu .menu-item .icon {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+.main-menu .menu-item span {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.main-menu.collapsed .menu-item span {
+    display: none;
+}

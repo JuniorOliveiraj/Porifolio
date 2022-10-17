@@ -9,10 +9,10 @@ import { HelmetProvider } from 'react-helmet-async';
 
 ReactDOM.render(
   <HelmetProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </HelmetProvider>,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+</HelmetProvider>,
   document.getElementById('root')
 );
 

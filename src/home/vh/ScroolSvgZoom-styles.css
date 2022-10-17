@@ -1,0 +1,24 @@
+.hero {
+    height: 100vh;
+    background: url("https://cdn.create.vista.com/api/media/medium/94397558/stock-photo-laptop-computer-works?token=") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0.7;
+  }
+  
+  .logo {
+  
+    background-size: contain;
+    overflow: hidden;
+    width: 100%;
+
+
+  }
+  
+
+  
+  
+  .section {
+    height: 100VH;
+    width: 100%;
+  }
