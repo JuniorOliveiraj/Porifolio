@@ -21,9 +21,6 @@ import Teste from '../testesScrolls/variosExemplos'
 import Footer from '../footer/footer'
 function Home() {
   const {signed,logout,login,user,photos,loand } = useContext(authGoogleContex); 
- 
-		const me = this
-    console.log(me);
   return (
     <div className="App">
       <Tubar />
@@ -191,7 +188,6 @@ function Home() {
     
     </div>
   );
-        
 }
 const CallToActionButtons = () => (
   <>
