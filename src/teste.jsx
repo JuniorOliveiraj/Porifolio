@@ -113,7 +113,6 @@ const TesteHome = () => {
                     duration={1}
                     position=">-0.2"
                   />
-                  
                   <Tween
                     target={2}
                     from={{ x: -50, y: 500 }}
