@@ -1,11 +1,4 @@
-import "./App.css";
-import './css/styleMenu.css'
-import Home from "./home/home";
-import Login from "./login/login";
-import { Routes, Route, Link } from "react-router-dom";
-import { authGoogleContex } from './contexts/authGoogle'
-import { AuthGoogle } from './contexts/authGoogle'
-import AppRouters from "./routers/routers";
+// routes
 import Router from './routes';
 // theme
 import ThemeProvider from './theme';
@@ -13,25 +6,14 @@ import ThemeProvider from './theme';
 import ScrollToTop from './components/ScrollToTop';
 import { BaseOptionChartStyle } from './components/chart/BaseOptionChart';
 
+// ----------------------------------------------------------------------
 
-function App() {
+export default function App() {
   return (
-    <AuthGoogle>
-      <ThemeProvider>
-        <ScrollToTop />
-        <BaseOptionChartStyle />
-        <Router />
-      </ThemeProvider>
-    </AuthGoogle>
-
-
-
-
-
-
+    <ThemeProvider>
+      <ScrollToTop />
+      <BaseOptionChartStyle />
+      <Router />
+    </ThemeProvider>
   );
-
-
 }
-
-export default App;
